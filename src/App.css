@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+html,
+body {
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import '~antd/dist/antd.css';
+
+.app-conatiner{
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-header {
+  background: rgb(255, 255, 255);
+  display: flex;
+  padding: 0 8px;
+  justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-header.ant-layout-header {
+  line-height: initial;
+  height: auto;
+  padding: 16px;
+}
+
+.app-sider {
+  border-top: 1px solid rgb(230, 230, 230);
+  background: rgb(255, 255, 255);
+  overflow: auto;
+}
+
+.home-sider {
+  padding: 8px;
+  padding-top: 16px;
+}
+
+.location-list-sider .ant-layout-sider-children {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.location-list-sider .ant-layout-sider-children .ant-layout-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-self: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.logo .anticon {
+  margin-right: 8px;
+}
+.logo > * {
+  display: flex;
+  align-self: center;
+  justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.login-details {
+  display: flex;
+  text-align: end;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-details > div {
+  margin-right: 8px;
+}
+
+.app-map {
+  position: relative;
+}
+
+.ant-space,
+.ant-collapse {
+  width: 100%;
+}
+
+.filter-btn{
+  width: 100%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timeline-clock-icon {
+  font-size: 16px;
+}
+
+.location-footer-info {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 4px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.location-list {
+  padding: 16px;
+}
+
+.location-title {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ant-override */
+.ant-divider-horizontal {
+  margin: 8px 0;
+  border-top: none;
+}
+
+.ant-popover-inner-content {
+  padding: 8px;
+}
+
+.ant-list-sm .ant-list-item {
+  padding: 8px 0 0 0;
+  border-bottom: none;
+}
+
+.ant-timeline-item-last {
+  padding-bottom: 0;
+}
+.ant-timeline-item-last > .ant-timeline-item-content {
+  min-height: auto;
 }
