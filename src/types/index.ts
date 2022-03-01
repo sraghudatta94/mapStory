@@ -9,7 +9,6 @@ export enum TripType {
   BUSINESS = "BUSINESS",
   HOLIDAY = "HOLIDAY",
   SCHOOL_TRIP = "SCHOOL_TRIP",
-  SOLO = "SOLO",
   NO_DATA = "NO_DATA",
 }
 
@@ -17,7 +16,6 @@ export const TripTypeLabels = {
   [TripType.BUSINESS]: "Business",
   [TripType.SCHOOL_TRIP]: "School",
   [TripType.HOLIDAY]: "Holiday",
-  [TripType.SOLO]: "Solo",
   [TripType.NO_DATA]: "No data",
 };
 

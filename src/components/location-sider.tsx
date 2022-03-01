@@ -53,7 +53,7 @@ const LocationSider:React.FC<LocationSiderProps> = () => {
           navigate("/");
         }}
         title={trip.title}
-        extra={[<Badge count={getTripTypeLabel(trip.type)} />]}
+        extra={[<Badge count={getTripTypeLabel(trip.type)} style={{ background: "green" }} />]}
       >
         {trip.description}
       </PageHeader>

@@ -18,7 +18,7 @@ export const trips: Trip[] = [
     visitStartDate: startDate.toDate(),
     visitEndDate: startDate.clone().add(18, "days").toDate(),
     image: "",
-    type: TripType.SOLO,
+    type: TripType.HOLIDAY,
     locations: [
       {
         id: "luxembourg",
