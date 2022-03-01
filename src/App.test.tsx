@@ -10,7 +10,7 @@ global.matchMedia = global.matchMedia || function () {
   };
 };
 
-test("renders learn react link", () => {
+test("Check if user email address is available", () => {
   render(<App />);
   const userEmail = screen.getByText(/user@email.com/i);
   expect(userEmail).toBeInTheDocument();
