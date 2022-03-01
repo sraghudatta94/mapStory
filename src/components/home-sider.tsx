@@ -31,7 +31,7 @@ import { getTripSortLabel, getTripTypeLabel } from "../utils/labels";
 
 const { Sider } = Layout;
 
-interface HomeSiderProps {}
+interface HomeSiderProps { }
 
 const HomeSider: React.FC<HomeSiderProps> = () => {
   const [searchText, setSearchText] = useState<string>("");
@@ -46,13 +46,13 @@ const HomeSider: React.FC<HomeSiderProps> = () => {
     if (searchText.length > 0) {
       filteredData = trips.filter(
         (trip) =>
-          trip.title.toLowerCase().search(searchText.toLowerCase()) !== -1 
-          // if we want to search from description uncomment below line
-          // || trip.description.toLowerCase().search(searchText.toLowerCase()) !== -1
+          trip.title.toLowerCase().search(searchText.toLowerCase()) !== -1
+        // if we want to search from description uncomment below line
+        // || trip.description.toLowerCase().search(searchText.toLowerCase()) !== -1
       );
     }
 
-    // filtering
+    // type filtering
     if (typeFilter.length > 0) {
       filteredData = trips.filter((trip) => typeFilter.includes(trip.type));
     }
@@ -63,8 +63,8 @@ const HomeSider: React.FC<HomeSiderProps> = () => {
         return a.visitStartDate > b.visitStartDate
           ? 1
           : a.visitStartDate < b.visitStartDate
-          ? -1
-          : 0;
+            ? -1
+            : 0;
       });
     }
     if (tripSort === TripSort.BY_DATE_DESC) {
@@ -72,8 +72,8 @@ const HomeSider: React.FC<HomeSiderProps> = () => {
         return a.visitStartDate < b.visitStartDate
           ? 1
           : a.visitStartDate > b.visitStartDate
-          ? -1
-          : 0;
+            ? -1
+            : 0;
       });
     }
     if (tripSort === TripSort.BY_NAME_ASC) {
@@ -172,16 +172,15 @@ const HomeSider: React.FC<HomeSiderProps> = () => {
       <div className="trip-list-meta">
         <div>
           {filteredTrips.length === 0 &&
-          (searchText !== "" || typeFilter.length > 0) ? (
+            (searchText !== "" || typeFilter.length > 0) ? (
             <Badge count="No trip meet the search / filter criteria." />
           ) : (
             ""
           )}
         </div>
         <Badge
-          count={`${filteredTrips.length} Trip${
-            filteredTrips.length > 1 ? "s" : ""
-          }`}
+          count={`${filteredTrips.length} Trip${filteredTrips.length > 1 ? "s" : ""
+            }`}
           style={{ background: "#1890ff" }}
         />
       </div>

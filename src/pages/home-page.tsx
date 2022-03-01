@@ -21,7 +21,7 @@ type Params = {
   tripId: string;
   locationId: string;
 };
-
+// intial map zoom coordinates can be updated here! 
 const initialViewStateDefault = {
   latitude: 38.481689,
   longitude: -100.5631208,
@@ -29,7 +29,7 @@ const initialViewStateDefault = {
   bearing: 0,
   pitch: 0,
 };
-interface HomeProps {}
+interface HomeProps { }
 
 const HomePage: React.FC<HomeProps> = () => {
   const navigate = useNavigate();
@@ -75,7 +75,7 @@ const HomePage: React.FC<HomeProps> = () => {
       };
     }
     return initialViewStateDefault;
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // zoom to entire trip covering all the locations
@@ -108,7 +108,7 @@ const HomePage: React.FC<HomeProps> = () => {
     }
   }, [trip]);
 
-  
+
   // on map load if we have anything to do
   const onMapLoad = () => {
 
@@ -131,7 +131,7 @@ const HomePage: React.FC<HomeProps> = () => {
         zoom: 9,
       });
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [trip, selectedLocation]);
 
   return (
