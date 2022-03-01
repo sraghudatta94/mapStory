@@ -5,7 +5,20 @@ body {
 
 @import '~antd/dist/antd.css';
 
-.app-conatiner{
+.page-not-found {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page-not-found h1 {
+  font-size: 52px;
+}
+
+.app-conatiner {
   height: 100vh;
 }
 
@@ -25,7 +38,8 @@ body {
 .app-sider {
   border-top: 1px solid rgb(230, 230, 230);
   background: rgb(255, 255, 255);
-  overflow: auto;
+  overflow: hidden;
+  display: flex;
 }
 
 .home-sider {
@@ -33,10 +47,11 @@ body {
   padding-top: 16px;
 }
 
+.home-sider .ant-layout-sider-children, 
 .location-list-sider .ant-layout-sider-children {
   display: flex;
+  width: 100%;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .location-list-sider .ant-layout-sider-children .ant-layout-footer {
@@ -69,9 +84,7 @@ body {
   margin-right: 8px;
 }
 
-.app-map {
-  position: relative;
-}
+.app-map {}
 
 .ant-space,
 .ant-collapse {
@@ -85,8 +98,12 @@ body {
   align-items: center;
 }
 
-.timeline-clock-icon {
-  font-size: 16px;
+.timeline-icon {
+  font-size: 20px;
+}
+
+.timeline-icon-selected {
+  font-size: 24px;
 }
 
 .location-footer-info {
@@ -99,11 +116,37 @@ body {
 
 .location-list {
   padding: 16px;
+  overflow: scroll;
+  display: flex;
+  flex-grow: 1;
+}
+
+.trip-list-meta {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0; 
+}
+
+.trip-list {
+  overflow: scroll;
 }
 
 .location-title {
   font-weight: bold;
   cursor: pointer;
+}
+
+.location-popup-content {
+  padding: 8px;
+}
+
+/* mapbox gl styles */
+.mapboxgl-marker {
+  cursor: pointer;
+}
+.mapboxgl-popup-content {
+  padding: 0;
 }
 
 /* ant-override */
