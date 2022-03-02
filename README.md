@@ -6,7 +6,7 @@
 
 <h1 align="center">Trip Advice</h1>
 <h3 align="center">
-	<a href="https://mapstory.vercel.app/" target="_blank">Live URL</a>
+	<a href="https://map-box-app.vercel.app/" target="_blank">Live URL</a>
 </h3>
   
 <!-- TABLE OF CONTENTS -->
@@ -55,27 +55,60 @@ This application allows user to view their trips on a map, & also view details r
 
 **Features:**
 
--   Trips List
--   Trip details popup
--   Click link & fly to location on map
--   Search Trips by title
--   Dynamic Filter Trips by type
--   Sort Trips by Name & Date (Asc & Desc)
-    </br>
-    </br>
+  <ol>
+    <li>  Intial Render to default coordinations 
+    <ul><li>The initial map will be render with preset coordinates display zoomed out map view of US, this is done to keep a defalt map view in place</li></ul></br>
+    </li>
+    <li> Select Trip & Fly
+    <ul><li>We have provided a one-click option that will take you to your desired trip on the map, along with relevant notes and timelines from your travel history.</li></ul></br>
+    </li>
+      <li> Dynamic Search for best experience
+    <ul><li>Search for trips using the dynamic search feature, which filters out trips based on names that match, as well as error bounds.</li></ul></br>
+    </li>
+     <li>Filter Trips by travel type
+    <ul><li>Filter trips by travel type using quick filter option, while handling errors for any missing data validations.</li>
+    <li>The data for filter was dynamically imported from a json file.</li>
+    </ul></br>
+    <li>Sorting by name and date
+    <ul><li>To find trips that suit your needs, sort your travels by name of date in ascending or descending order.</li>
+    <li>The data for sort was dynamically imported from a json file,and not hardcoded.</li>
+    </ul></br>
+     <li>Dynamic Icon & zoom outs
+    <ul><li>The specific list will be highlighted if you click on the map icon; there are also back and front buttons, as well as zoom out.</li>
+    </ul></br>
+     <li>Additional features for dynamic trip count & date calculation
+    <ul><li>We have gone one step ahead in representing the details in best way possible.</li>
+    <li>The trip count indicator represents count of trips displayed & trip start and end date displayed are calculated dynamically using momentjs
+    </li>
+    </ul></br>
+    </li>
+  </ol>
 
 ### Tech Stack
 
  </br>
-<p align="center">
+<div align="center">
 	<a href="https://reactjs.org/">
 		<img src="https://res.cloudinary.com/emarat/image/upload/h_150/v1631867520/react-logo_aiqchy.png" title="React" height="100">
 	</a>
 	<a href="https://www.vercel.com/">
-		<img src="https://logovtor.com/wp-content/uploads/2020/10/vercel-inc-logo-vector.png" style="border-radius:2%"  title="Vercel" height="100">
-	</a>
+		<img src="https://image.pitchbook.com/hG77CP8UhJjUMH6f59hnUSo3p2V1608196200048_200x200" style="border-radius:2%"  title="Vercel" height="100">
+  </a>
+  	<a href="https://www.w3schools.com/">
+		<img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png" style="border-radius:2%"  title="HTML" height="100">
+    </a>
+
 </br>
-</p>
+	<a href="https://www.w3schools.com/">
+		<img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png" style="border-radius:2%"  title="CSS" height="100">
+    </a>
+	<a href="https://docs.mapbox.com/mapbox-gl-js/api/">
+		<img src="https://docs.mapbox.com/help/demos/custom-markers-gl-js/mapbox-icon.png" style="border-radius:2%"  title="Mapbox Gl" height="100">
+    </a>
+    	<a href="https://storybook.js.org/">
+		<img src="https://repository-images.githubusercontent.com/54173593/39e57000-a3fa-11e9-83c7-953827061607" style="border-radius:2%"  title="StoryBook" height="100">
+    </a>
+</div>
 
 <!-- GETTING STARTED -->
 
@@ -89,14 +122,16 @@ Following are the simple steps to run this project.
 
 </br>
 
-    git clone https://github.com/raghudata369/mapBoxApp.git
+<a href="https://nodejs.org/en/download/" > Install Node</a>
+
+<a href="https://git-scm.com/downloads" > Install git</a>
 
 ### Installation
 
 1. Clone the repo
 
     ```sh
-    git clone https://github.com/raghudata369/mapBoxApp.git
+    git clone https://github.com/sraghudatta94/mapStory.git
     ```
 
 2. Install NPM packages
@@ -114,7 +149,16 @@ Following are the simple steps to run this project.
     ```
 
 5. Run Test cases
-   `sh npm test `
+
+    ```sh
+     npm test
+    ```
+
+6. Run Story book
+
+    ```sh
+    yarn storybook
+    ```
 
 ##
 
@@ -140,6 +184,7 @@ We are testing our application with edge cases using jest and react testing libr
 -   [typescript] - Static type checking
 -   [Moment-js] - Dates
 -   [Eslint] - Error check
+-   [Story-Book] - Component library
 
 ##
 
